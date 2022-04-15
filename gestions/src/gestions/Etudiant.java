@@ -3,6 +3,7 @@ package gestions;
 import java.util.ArrayList;
 
 
+
 public class Etudiant implements Comparable<Etudiant> {
 	private int id;
 	private String nom;
@@ -21,4 +22,12 @@ public class Etudiant implements Comparable<Etudiant> {
 		}
 	return	((Etudiant)obj).id==this.id ;
 	}
-}	
+	@Override
+	public int compareTo(Etudiant o) {
+		
+		if(this.note==o.note) return 0;
+		if(this.note>o.note) return 1;
+		return -1;
+	}
+	
+}
