@@ -10,5 +10,13 @@ public class ListEtudiants extends ArrayList<Etudiant> {
 		return super.add(e);
 		
 	}
+	public interface conditon {
+		
+		public boolean estVrai(Etudiant e) {
+			
+		}
+		public List<Etudiant> filtrer(Condition c)
+		
+	}
 
 }
