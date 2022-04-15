@@ -1,6 +1,7 @@
 package gestions;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 
@@ -15,8 +16,14 @@ public class Etudiant implements Comparable<Etudiant> {
 		this.nom = nom;
 		this.note = 10;
 	}
+	public Etudiant (int id,String nom,double note) {
+		this.id = id;
+		this.nom = nom;
+		this.note = note;
+		
+	}
 	public String toString() {
-		return this.nom+ " + "+this.note;
+		return "le nom : "+this.nom+" ; la note : "+this.note;
 	}
 	public boolean equals(Object obj) {
 		if (! (obj instanceof Etudiant) ){
@@ -31,6 +38,15 @@ public class Etudiant implements Comparable<Etudiant> {
 		if(this.note>o.note) return 1;
 		return -1;
 	}
+	public void changerNote (int note) {
+		 this.note = note;
+		 System.out.println(" la note del'objet apres la modification est"+note);
+	}
 	
-}
+	
+	
+	
+		
+		
+	}
 

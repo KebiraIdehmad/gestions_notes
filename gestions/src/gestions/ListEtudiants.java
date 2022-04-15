@@ -1,8 +1,9 @@
 package gestions;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class ListEtudiants extends ArrayList<Etudiant> {
+public class ListEtudiants extends ArrayList<Etudiant> implements Condition {
 	
 	@Override
 	public boolean add(Etudiant e) {
@@ -10,13 +11,7 @@ public class ListEtudiants extends ArrayList<Etudiant> {
 		return super.add(e);
 		
 	}
-	public interface conditon {
-		
-		public boolean estVrai(Etudiant e) {
-			
-		}
-		public List<Etudiant> filtrer(Condition c)
-		
-	}
+
+	
 
 }
