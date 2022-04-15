@@ -12,4 +12,13 @@ public class Etudiant implements Comparable<Etudiant> {
 		this.nom = nom;
 		this.note = 10;
 	}
+	public String toString() {
+		return this.nom+ " + "+this.note;
+	}
+	public boolean equals(Object obj) {
+		if (! (obj instanceof Etudiant) ){
+			return false;
+		}
+	return	((Etudiant)obj).id==this.id ;
+	}
 }	
